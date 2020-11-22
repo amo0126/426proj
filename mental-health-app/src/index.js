@@ -1,17 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './pages/home';
-import {Switch, Route, BrowserRouter as Router} from 'react-router-dom';
-import Journal from './pages/journal';
-import Selfcare from './pages/selfcare';
+import App from './App';
 
 ReactDOM.render(
-  <Router>
-    <Switch>
-      <Route exact path="/" component={Home}/>
-      <Route path="/journal" component={Journal}/>
-      <Route path="/selfcare" component={Selfcare}/>
-    </Switch>
-</Router>,
+  <App></App>,
   document.getElementById('root')
 );
