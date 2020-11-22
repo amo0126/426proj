@@ -3,7 +3,7 @@ import {Hero, HeroBody, HeroFooter, HeroHeader, Nav,
 Container, Tabs, TabLink, Tab, Title, TabList} from 'bloomer';
 import {Link} from 'react-router-dom';
 
-export class Physical extends Component {
+export class HeroCard extends Component {
     render() {
         return (
             <Hero isColor='info' isSize='medium'>
@@ -20,9 +20,9 @@ export class Physical extends Component {
                     <Tabs isBoxed isFullWidth>
                         <Container>
                             <TabList>
-                                <Tab><Link to="/selfcare" class='link'><TabLink>The Importance of Self Care</TabLink></Link></Tab>
+                                <Tab isActive><Link to="/selfcare" class='link'><TabLink>The Importance of Self Care</TabLink></Link></Tab>
                                 <Tab><Link to="/mental" class='link'><TabLink>Mental Wellbeing</TabLink></Link></Tab>
-                                <Tab isActive><Link to="/physical" class='link'><TabLink>Physical Wellbeing</TabLink></Link></Tab>
+                                <Tab><Link to="/physical" class='link'><TabLink>Physical Wellbeing</TabLink></Link></Tab>
                                 <Tab><Link to="/practical" class='link'><TabLink>Practical Self Care</TabLink></Link></Tab>
                                 <Tab><Link to="/social" class='link'><TabLink>Social Wellbeing</TabLink></Link></Tab>
                             </TabList>
@@ -34,4 +34,4 @@ export class Physical extends Component {
     }
 }
 
-export default Physical;
+export default HeroCard;
