@@ -1,34 +1,31 @@
 import React, { Component } from 'react';
 import 'bulma/css/bulma.css';
-import { Navbar, NavbarBrand, NavbarItem, brand, Icon, NavbarBurger, NavbarMenu,
-NavbarStart, Field, Button, NavbarLink, Control, NavbarDropdown, NavbarDivider, NavbarEnd  } from 'bloomer';
+import {Navbar, NavbarBrand, NavbarItem, brand, NavbarBurger, NavbarMenu,
+NavbarStart, Field, Button, NavbarLink, Control, NavbarDropdown, NavbarEnd  } from 'bloomer';
+import {Link, BrowserRouter as Router} from 'react-router-dom';
 
-class Nav extends Component {
+export class Nav extends Component {
     render() {
       return (
+          <Router>
         <Navbar style={{ border: 'solid 1px #00D1B2', margin: '0' }}>
             <NavbarBrand>
                 <NavbarItem>
-                    <img src={brand} style={{ marginRight: 5 }} /> Bloomer
+                    <img src={brand} style={{ marginRight: 5 }} alt=''/> Logo Here
                 </NavbarItem>
-                <NavbarItem isHidden='desktop'>
-                    <Icon className='fa fa-github' />
-                </NavbarItem>
-                <NavbarItem isHidden='desktop'>
-                    <Icon className='fa fa-twitter' style={{ color: '#55acee' }} />
-                </NavbarItem>
-                <NavbarBurger />
+                <NavbarBurger onClick={this.onClickNav}/>
             </NavbarBrand>
-            <NavbarMenu >
+            <NavbarMenu onClick={this.onClickNav}>
                 <NavbarStart>
-                    <NavbarItem href='index.js'>Home</NavbarItem>
+                    <NavbarItem><Link to={"/"}>Home</Link></NavbarItem>
+                    <NavbarItem><Link to={"/journal"}>Journal</Link></NavbarItem>
                     <NavbarItem hasDropdown isHoverable>
-                        <NavbarLink href='#/documentation'>Documentation</NavbarLink>
+                        <NavbarLink><Link to={"/selfcare"}>Self-Care</Link></NavbarLink>
                         <NavbarDropdown>
-                            <NavbarItem href='#/'>One A</NavbarItem>
-                            <NavbarItem href='#/'>Two B</NavbarItem>
-                            <NavbarDivider />
-                            <NavbarItem href='#/'>Two A</NavbarItem>
+                            <NavbarItem href='#/'>Mental Self-Care</NavbarItem>
+                            <NavbarItem href='#/'>Practical Self-Care</NavbarItem>
+                            <NavbarItem href='#/'>Physical Self-Care</NavbarItem>
+                            <NavbarItem href='#/'>Social Self-Care</NavbarItem>
                         </NavbarDropdown>
                     </NavbarItem>
                 </NavbarStart>
@@ -54,6 +51,7 @@ class Nav extends Component {
                 </NavbarEnd>
             </NavbarMenu>
         </Navbar>
+        </Router>
     );
     }
   }
