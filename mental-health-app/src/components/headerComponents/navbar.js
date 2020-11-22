@@ -17,10 +17,10 @@ export class Nav extends Component {
           </NavbarBrand>
           <NavbarMenu onClick={this.onClickNav}>
               <NavbarStart>
-                  <NavbarItem><Link to="/" class='link'>Home</Link></NavbarItem>
-                  <NavbarItem><Link to="/journal" class='link'>Journal</Link></NavbarItem>
+                  <NavbarItem><Link to="/" class='link'><Button isColor='black' isOutlined>Home</Button></Link></NavbarItem>
+                  <NavbarItem><Link to="/journal" class='link'><Button isColor='black' isOutlined>Journal</Button></Link></NavbarItem>
                   <NavbarItem hasDropdown isHoverable>
-                      <NavbarLink><Link to="/selfcare" class='link'>Selfcare</Link></NavbarLink>
+                      <NavbarLink><Link to="/selfcare" class='link'><Button isColor='black' isOutlined>Selfcare</Button></Link></NavbarLink>
                       <NavbarDropdown>
                           <NavbarItem><Link to="/mental" class='link'>Mental Selfcare</Link></NavbarItem>
                           <NavbarItem><Link to="/physical" class='link'>Physical Selfcare</Link></NavbarItem>
@@ -51,7 +51,6 @@ export class Nav extends Component {
               </NavbarEnd>
           </NavbarMenu>
         </Navbar>
-      
     );
     }
   }
