@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import 'bulma/css/bulma.css';
-import { Navbar, NavbarBrand, Icon, brand, NavbarStart, NavbarEnd, NavbarItem,
-NavbarMenu, Control, Field, Button, NavbarLink, NavbarBurger, NavbarDropdown} from 'bloomer';
+import { Navbar, NavbarBrand, brand, NavbarStart, NavbarEnd, NavbarItem,
+NavbarMenu, Control, Field, Button, NavbarBurger} from 'bloomer';
 
 
 export class Nav extends Component {
@@ -28,8 +28,14 @@ export class Nav extends Component {
                               <Button id="twitter" data-social-network="Twitter" data-social-action="tweet"
                               data-social-target="http://bloomer.js.org" target="_blank" href="https://twitter.com/intent/tweet?text=bloomer:
                               a set of React Stateless Components for bulma.io&amp;url=http://bloomer.js.org&amp;via=AlgusDark">
-                                  <Icon className="fa fa-twitter" />
-                                  <span>Tweet</span>
+                                  <span>Sign up</span>
+                              </Button>
+                          </Control>
+                          <Control>
+                              <Button id="twitter" data-social-network="Twitter" data-social-action="tweet"
+                              data-social-target="http://bloomer.js.org" target="_blank" href="https://twitter.com/intent/tweet?text=bloomer:
+                              a set of React Stateless Components for bulma.io&amp;url=http://bloomer.js.org&amp;via=AlgusDark">
+                                  <span>Log in</span>
                               </Button>
                           </Control>
                       </Field>
