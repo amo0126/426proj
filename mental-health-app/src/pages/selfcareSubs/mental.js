@@ -21,11 +21,11 @@ export class Mental extends Component {
             <Tabs isBoxed isFullWidth>
                 <Container>
                     <TabList>
-                        <Tab><Link to="/selfcare" class='link'><TabLink>The Importance of Self Care</TabLink></Link></Tab>
-                        <Tab isActive><Link to="/mental" class='link'><TabLink>Mental Wellbeing</TabLink></Link></Tab>
-                        <Tab><Link to="/physical" class='link'><TabLink>Physical Wellbeing</TabLink></Link></Tab>
-                        <Tab><Link to="/practical" class='link'><TabLink>Practical Self Care</TabLink></Link></Tab>
-                        <Tab><Link to="/social" class='link'><TabLink>Social Wellbeing</TabLink></Link></Tab>
+                        <Tab><Link to="/selfcare" class='link'>The Importance of Self Care</Link></Tab>
+                        <Tab isActive><Link to="/mental" class='link'>Mental Wellness</Link></Tab>
+                        <Tab><Link to="/physical" class='link'>Physical Wellness</Link></Tab>
+                        <Tab><Link to="/practical" class='link'>Practical Self Care</Link></Tab>
+                        <Tab><Link to="/social" class='link'>Social Wellness</Link></Tab>
                     </TabList>
                 </Container>
             </Tabs>
