@@ -20,10 +20,10 @@ const expressSession = require('express-session');
 
 app.post('/login', (req,res) => {
 
-    let username = req.body.username;
-    let password = req.body.password;
+    let username = req.params.username;
+    let password = req.params.password;
 
-    let user_data = findByUsername(username);
+    let user_data = User.findByUsername(username);
     if (user_data == null) {
         res.status(404).send("user not found");
         return;
@@ -47,9 +47,7 @@ app.get('/logout', (req, res) => {
 
 app.post('/user', (req, res) => {
     
-    let {fname, lname, username, password} = req.body.params;
-
-    let u = User.create(username, password, fname, lname);
+    let u = User.create(req.params.username, req.params.password, req.params.fname, req.params.lname);
     if (u==null) {
         res.status(400).send("Bad Request");
         return;
@@ -251,7 +249,7 @@ app.delete('/moodtracker/:id', (req, res)=> {
 //delete specific moodTracker (and remove from user's array)
 
 
-const port = 3030;
-app.listen(port, () => {
-    console.log("Tutorial1 up and running on port " + port);
-});
+// const port = 3030;
+// app.listen(port, () => {
+//     console.log("Tutorial1 up and running on port " + port);
+// });

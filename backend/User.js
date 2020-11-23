@@ -56,8 +56,8 @@ User.findByUsername = (username) => {
 
 
 User.create = (username, password, fname, lname) => {
-    let u = new User(username, password, fname, lname);
-    user_data.set(username, u);
+    let u = new User(username.toString(), password.toString(), fname.toString(), lname.toString());
+    user_data.set(u.username, u);
     return u;
 }
 
