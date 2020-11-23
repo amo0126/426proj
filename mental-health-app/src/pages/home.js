@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
-import {Section, Field, Label, Control, Input} from 'bloomer';
+import {Section} from 'bloomer';
+import { Search } from '../components/searchComponent/search';
 
 export class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { address: '' };
+  }
+ 
+  handleChange = address => {
+    this.setState({ address });
+  };
   render() {
     return (
       <div>
         <body>
-            <Section>
-              <Field>
-                  <Label>Name</Label>
-                  <Control>
-                      <Input type="text" placeholder='Text Input' />
-                  </Control>
-              </Field>
-            </Section>   
+          <Section>
+            <Search/>
+          </Section> 
         </body>
       </div>
   );
