@@ -19,23 +19,9 @@ export class Nav extends Component {
               <NavbarStart>
                   <NavbarItem><Link to="/" class='link'><Button isColor='black' isOutlined>Home</Button></Link></NavbarItem>
                   <NavbarItem><Link to="/journal" class='link'><Button isColor='black' isOutlined>Journal</Button></Link></NavbarItem>
-                  <NavbarItem hasDropdown isHoverable>
-                      <NavbarLink><Link to="/selfcare" class='link'><Button isColor='black' isOutlined>Selfcare</Button></Link></NavbarLink>
-                      <NavbarDropdown>
-                          <NavbarItem><Link to="/mental" class='link'>Mental Selfcare</Link></NavbarItem>
-                          <NavbarItem><Link to="/physical" class='link'>Physical Selfcare</Link></NavbarItem>
-                          <NavbarItem><Link to="/practical" class='link'>Practical Selfcare</Link></NavbarItem>
-                          <NavbarItem><Link to="/social" class='link'>Social Selfcare</Link></NavbarItem>
-                      </NavbarDropdown>
-                  </NavbarItem>
+                  <NavbarItem><Link to="/selfcare" class='link'><Button isColor='black' isOutlined>Selfcare</Button></Link></NavbarItem>
               </NavbarStart>
               <NavbarEnd>
-                  <NavbarItem href="https://github.com/AlgusDark/bloomer" isHidden='touch'>
-                      <Icon className='fa fa-github' />
-                  </NavbarItem>
-                  <NavbarItem href="https://twitter.com/AlgusDark" isHidden='touch'>
-                      <Icon className='fa fa-twitter' style={{ color: '#55acee' }} />
-                  </NavbarItem>
                   <NavbarItem>
                       <Field isGrouped>
                           <Control>
