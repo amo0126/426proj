@@ -8,7 +8,7 @@ NavbarMenu, Control, Field, Button, NavbarBurger} from 'bloomer';
 export class Nav extends Component {
     render() {
       return (
-        <Navbar style={{ border: 'solid 1px #00D1B2', margin: '0' }}>
+        <Navbar style={{ margin: '0' }}>
           <NavbarBrand>
               <NavbarItem>
                   <img src={brand} style={{ marginRight: 5 }} alt=''/> LOGO
