@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import {Hero, HeroBody, HeroFooter, HeroHeader, Nav,
-Container, Tabs, TabLink, Tab, Title, TabList} from 'bloomer';
+Container, Tabs, TabLink, Tab, Title, TabList, Section} from 'bloomer';
 import {Link} from 'react-router-dom';
 
 export class Mental extends Component {
   render() {
     return (
+        <div>
         <Hero isColor='info' isSize='medium'>
         <HeroHeader>
         </HeroHeader>
@@ -30,6 +31,12 @@ export class Mental extends Component {
             </Tabs>
         </HeroFooter>
         </Hero>
+        <body>
+            <Section>
+                Meditation
+            </Section>   
+        </body>
+    </div>
   );
   }
 }
