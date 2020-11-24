@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
+import JournalForm from '../components/journalForm'
 
 export class Journal extends Component {
   render() {
     return (
     <div className="App">
-      The journal
-      <div className="Date">
-        
-      </div>
+        <JournalForm />
+        <ShowJournal />
     </div>
   );
   }
