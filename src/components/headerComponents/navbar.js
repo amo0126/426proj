@@ -3,15 +3,15 @@ import {Link} from 'react-router-dom';
 import 'bulma/css/bulma.css';
 import { Navbar, NavbarBrand, brand, NavbarStart, NavbarEnd, NavbarItem,
 NavbarMenu, Control, Field, Button, NavbarBurger} from 'bloomer';
-
+import UserForm from '../login/createUserForm';
 
 export class Nav extends Component {
     render() {
       return (
         <Navbar style={{ margin: '0' }}>
           <NavbarBrand>
-              <NavbarItem id='logo'>
-                   Mental Health Application
+              <NavbarItem>
+                  <img src={brand} style={{ marginRight: 5 }} alt=''/> LOGO
               </NavbarItem>
               <NavbarBurger onClick={this.onClickNav} />
           </NavbarBrand>
@@ -25,18 +25,12 @@ export class Nav extends Component {
                   <NavbarItem>
                       <Field isGrouped>
                           <Control>
-                              <Button id="twitter" data-social-network="Twitter" data-social-action="tweet"
-                              data-social-target="http://bloomer.js.org" target="_blank" href="https://twitter.com/intent/tweet?text=bloomer:
-                              a set of React Stateless Components for bulma.io&amp;url=http://bloomer.js.org&amp;via=AlgusDark">
-                                  <span>Sign up</span>
-                              </Button>
+                              <Link to="/signup " ><Button id="sign-up" target="_blank" >
+                                  <span>Sign Up</span>
+                              </Button></Link>
                           </Control>
                           <Control>
-                              <Button id="twitter" data-social-network="Twitter" data-social-action="tweet"
-                              data-social-target="http://bloomer.js.org" target="_blank" href="https://twitter.com/intent/tweet?text=bloomer:
-                              a set of React Stateless Components for bulma.io&amp;url=http://bloomer.js.org&amp;via=AlgusDark">
-                                  <span>Log in</span>
-                              </Button>
+                              <Link to="/login " class='link'><Button id="log-in" target="_blank"><span>Log in</span></Button></Link>
                           </Control>
                       </Field>
                   </NavbarItem>
@@ -45,6 +39,6 @@ export class Nav extends Component {
         </Navbar>
     );
     }
-  }
+    }
   
   export default Nav;

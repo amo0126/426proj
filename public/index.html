@@ -17,13 +17,15 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script>
       function activatePlacesSearch() {
         let input= document.getElementById('search');
         let autocomplete = new google.maps.places.Autocomplete(input);
       }
     </script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRb-fKaIz-G6yDg6eTuv4tS4FcGC6TPkQ&libraries=places&callback=activatePlacesSearch">
+</script>
     
   </body>
 </html>

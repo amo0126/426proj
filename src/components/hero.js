@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import {Hero, HeroBody, HeroFooter, HeroHeader, Nav,
 Container, Tabs, TabLink, Tab, Title, TabList, Section} from 'bloomer';
 import {Link} from 'react-router-dom';
+import './hero.css';
 
-export class Physical extends Component {
+export class HeroCard extends Component {
     render() {
         return (
             <div>
@@ -21,9 +22,9 @@ export class Physical extends Component {
                     <Tabs isBoxed isFullWidth>
                         <Container>
                             <TabList>
-                                <Tab><Link to="/selfcare" class='link'>The Importance of Self Care</Link></Tab>
+                                <Tab isActive><Link to="/selfcare" class='link'>The Importance of Self Care</Link></Tab>
                                 <Tab><Link to="/mental" class='link'>Mental Wellness</Link></Tab>
-                                <Tab isActive><Link to="/physical" class='link'>Physical Wellness</Link></Tab>
+                                <Tab><Link to="/physical" class='link'>Physical Wellness</Link></Tab>
                                 <Tab><Link to="/practical" class='link'>Practical Self Care</Link></Tab>
                                 <Tab><Link to="/social" class='link'>Social Wellness</Link></Tab>
                             </TabList>
@@ -33,7 +34,7 @@ export class Physical extends Component {
                 </Hero>
                 <body>
                     <Section>
-                        Exercise
+                        The importance of selfcare
                     </Section>   
                 </body>
             </div>
@@ -41,4 +42,4 @@ export class Physical extends Component {
     }
 }
 
-export default Physical;
+export default HeroCard;
