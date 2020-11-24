@@ -5,10 +5,11 @@ var baseURL = 'https://mental-health-app-backend.herokuapp.com'
 
 export const createUser = async function(fname, lastname, username, password, confirmpass) {
     if(password !== confirmpass) {return "passwords don't match";}
-    const result = axios({
+    const result = await axios({
         method: 'post',
         url: `${baseURL}` + '/user',
-        // withCredentials: true,
+        //withCredentials: true,
+        
         data: {
             fname: fname,
             lastname: lastname,
@@ -16,4 +17,5 @@ export const createUser = async function(fname, lastname, username, password, co
             password: password
         }
     })
+    return result;
 }

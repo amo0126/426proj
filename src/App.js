@@ -10,6 +10,7 @@ import Physical from './pages/selfcareSubs/physical';
 import Practical from './pages/selfcareSubs/practical';
 import Social from './pages/selfcareSubs/social';
 import SignUp from './pages/signup'
+import Login from './pages/login'
 import './style.css';
 
 export class App extends Component {
@@ -25,6 +26,7 @@ export class App extends Component {
         <Route exact path="/practical" component={Practical} />
         <Route exact path="/social" component={Social} />
         <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/login" component={Login} />
         <Footer />
     </Router>
   );
