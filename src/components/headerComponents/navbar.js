@@ -25,12 +25,12 @@ export class Nav extends Component {
                   <NavbarItem>
                       <Field isGrouped>
                           <Control>
-                              <Link to="/signup " ><Button id="sign-up" target="_blank" >
+                              <Link to="/signup " ><Button id="sign-up">
                                   <span>Sign Up</span>
                               </Button></Link>
                           </Control>
                           <Control>
-                              <Link to="/login " class='link'><Button id="log-in" target="_blank"><span>Log in</span></Button></Link>
+                              <Link to="/login " class='link'><Button id="log-in"><span>Log in</span></Button></Link>
                           </Control>
                       </Field>
                   </NavbarItem>

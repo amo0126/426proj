@@ -9,8 +9,8 @@ import Mental from './pages/selfcareSubs/mental';
 import Physical from './pages/selfcareSubs/physical';
 import Practical from './pages/selfcareSubs/practical';
 import Social from './pages/selfcareSubs/social';
-import SignUp from './pages/signup'
-import Login from './pages/login'
+import SignUp from './pages/signup';
+import Login from './pages/login';
 import './style.css';
 
 export class App extends Component {
