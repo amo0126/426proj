@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HeroCard from '../components/hero';
+import HeroCard from '../components/heroComponent/hero';
 
 export class Selfcare extends Component {
   render() {

@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import './search.css';
+import Geocode from "react-geocode";
 
-class Autocomplete extends Component {
+export class Autocomplete extends Component {
   static propTypes = {
     suggestions: PropTypes.instanceOf(Array)
   };
@@ -101,9 +102,16 @@ class Autocomplete extends Component {
         userInput
       }
     } = this;
-
     let suggestionsListComponent;
-
+    // set Google Maps Geocoding API for purposes of quota management. Its optional but recommended.
+    Geocode.setApiKey("AIzaSyBRb-fKaIz-G6yDg6eTuv4tS4FcGC6TPkQ");
+    
+    // set response language. Defaults to english.
+    Geocode.setLanguage("en");
+    
+    // set response region. Its optional.
+    Geocode.setRegion("us");
+    
     if (showSuggestions && userInput) {
       if (filteredSuggestions.length) {
         suggestionsListComponent = (
@@ -137,14 +145,32 @@ class Autocomplete extends Component {
       }
     }
 
+    function myFunction() {
+      var input = document.getElementById("userInput");
+      // Get latitude & longitude from address.
+        Geocode.fromAddress(input).then(
+          response => {
+            const { lat, lng } = response.results[0].geometry.location;
+            console.log(lat, lng);
+          },
+          error => {
+            console.error(error);
+          }
+        );
+    }
+
     return (
       <Fragment>
-        <input
-          type="text"
-          onChange={onChange}
-          onKeyDown={onKeyDown}
-          value={userInput}
-        />
+        <form id="form">
+          <input
+            type="text"
+            onChange={onChange}
+            onKeyDown={onKeyDown}
+            value={userInput}
+            id="userInput"
+          />
+          <button onClick={myFunction()}>Go</button>
+        </form>
         {suggestionsListComponent}
       </Fragment>
     );
