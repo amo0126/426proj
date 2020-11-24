@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { createJournal } from '../requests/createJournal';
+import CreateJournal from '../requests/createJournal';
 import { Field, Label, Input, Button} from 'bloomer'
 
 export class JournalForm extends Component {
@@ -21,7 +21,7 @@ export class JournalForm extends Component {
 
       async handleSubmit(event) {
         event.preventDefault();
-        await createJournal(this.state.value);
+        await new CreateJournal(this.state.value);
 
 
       }
