@@ -1,3 +1,14 @@
 .link {
     cursor: default;
 }
+
+#logo {
+    color: #88b378;
+}
+
+#tagline {
+    margin: auto;
+  width: 50%;
+  border: 3px solid #88b378;
+  padding: 10px;
+}

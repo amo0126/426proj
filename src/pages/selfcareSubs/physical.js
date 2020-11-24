@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {Hero, HeroBody, HeroFooter, HeroHeader, Nav,
-Container, Tabs, TabLink, Tab, Title, TabList, Section} from 'bloomer';
+Container, Tabs, Content, Tab, Title, TabList, Section, Box} from 'bloomer';
 import {Link} from 'react-router-dom';
 
 export class Physical extends Component {
     render() {
         return (
             <div>
-            <Hero isColor='info' isSize='medium'>
+            <Hero isColor='success' isSize='medium'>
                 <HeroHeader>
                 </HeroHeader>
 
@@ -33,8 +33,22 @@ export class Physical extends Component {
                 </Hero>
                 <body>
                     <Section>
-                        Exercise
-                    </Section>   
+                        <Content>
+                            <h1>Physical Wellness</h1>
+                            <p>
+                                Physical Wellness is important for both your health and happiness. According to 
+                                doctors, participating in physical activity for at least 30 minutes a day will
+                                improve the levels of seratonin in your body. Some common physical activities that also 
+                                promote a healthy mind are running, yoga, and pilates.
+                            </p>
+                            <p>If you want to begin a healthy exercise routine but don't know where to start, 
+                                checkout these resources:
+                            </p>
+                            <Box><a href="hhttps://www.blogilates.com/">Blogilates</a> - pilates with a fun, inspiring twist</Box>
+                            <Box><a href="hhttps://yogawithadriene.com/">Yoga with Adriene</a> - begin a yoga practice that you will want to keep up with</Box>
+                            <Box><a href="http://www.c25k.com/">C25K Running Program</a> - learn how to run a 5k in 9 weeks</Box>
+                        </Content> 
+                    </Section> 
                 </body>
             </div>
         );
