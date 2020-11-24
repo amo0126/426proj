@@ -3,15 +3,15 @@ import {Link} from 'react-router-dom';
 import 'bulma/css/bulma.css';
 import { Navbar, NavbarBrand, brand, NavbarStart, NavbarEnd, NavbarItem,
 NavbarMenu, Control, Field, Button, NavbarBurger} from 'bloomer';
-import UserForm from '../login/createUserForm';
+
 
 export class Nav extends Component {
     render() {
       return (
         <Navbar style={{ margin: '0' }}>
           <NavbarBrand>
-              <NavbarItem>
-                  <img src={brand} style={{ marginRight: 5 }} alt=''/> LOGO
+              <NavbarItem id='logo'>
+                   Mental Health Application
               </NavbarItem>
               <NavbarBurger onClick={this.onClickNav} />
           </NavbarBrand>
@@ -39,6 +39,6 @@ export class Nav extends Component {
         </Navbar>
     );
     }
-    }
+  }
   
   export default Nav;
