@@ -4,7 +4,10 @@ export class Journal extends Component {
   render() {
     return (
     <div className="App">
-      The journal page
+      The journal
+      <div className="Date">
+        
+      </div>
     </div>
   );
   }
