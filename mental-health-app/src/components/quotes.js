@@ -9,7 +9,7 @@ export class Quotes extends React.Component {
   };
 
   async componentDidMount() {
-    const url = "https://quotes.rest/qod?category=life&language=en&api_key=q4SBTpgbwGNgBbfRxuV0FgeF";
+    const url = "https://quotes.rest/quote/random?language=en&limit=1&api_key=q4SBTpgbwGNgBbfRxuV0FgeF";
     const response = await fetch(url);
     const data = await response.json();
     this.setState({ quote: data.contents.quotes[0], loading: false });
