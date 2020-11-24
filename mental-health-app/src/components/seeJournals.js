@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react';
 import axios from 'axios'
 
 export class ShowJournal extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            journal: await getJournal(0)
+            journal: getJournal()
         }
     }
 
@@ -21,9 +21,10 @@ export class ShowJournal extends Component {
 }
 export default ShowJournal;
 
-export async function getJournal(id) {
-    return response = await axios({
+export async function getJournal() {
+    let response = await axios({
         method: "get",
-        url: 'https://mental-health-app-backend.herokuapp.com' + `${id}`
+        url: 'https://mental-health-app-backend.herokuapp.com'
     })
+    return response;
 }
