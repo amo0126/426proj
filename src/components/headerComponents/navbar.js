@@ -10,8 +10,8 @@ export class Nav extends Component {
       return (
         <Navbar style={{ margin: '0' }}>
           <NavbarBrand>
-              <NavbarItem>
-                  <img src={brand} style={{ marginRight: 5 }} alt=''/> LOGO
+              <NavbarItem id='logo'>
+                   Mental Health Application
               </NavbarItem>
               <NavbarBurger onClick={this.onClickNav} />
           </NavbarBrand>

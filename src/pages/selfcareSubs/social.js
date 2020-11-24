@@ -7,7 +7,7 @@ export class Social extends Component {
     render() {
         return (
             <div>
-            <Hero isColor='info' isSize='medium'>
+            <Hero isColor='success' isSize='medium'>
                 <HeroHeader>
                 </HeroHeader>
 
@@ -41,6 +41,8 @@ export class Social extends Component {
                             If possible, you should focus on activities that allow you to see others in person
                             while complying with the <a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html">CDC guidlines</a> to maintain 6 feet apart. 
                         </p>
+                        <p>Always wear your mask!</p>
+                        <p>And don't forget to take time away from social media and give your loved ones a call</p>
                     </Content>
                 </Section>   
                 </body>

@@ -11,13 +11,12 @@ export class Foot extends Component {
                             <Column isFull>
                                 <p>
                                     Made
-                                    by <a>Algus Dark</a>
+                                    by <a>Alexis Ortiz and Lucy Hill</a>
                                 </p>
                             </Column>
                         </Columns>
                         <Content isSize='small'>
-                            <p>The source code is licensed under <a target="_blank">MIT</a>.</p>
-                            <p>The website content is licensed under <a target="_blank">CC ANS 4.0</a>.</p>
+                            <p><a href="https://github.com/amo0126/426proj">GitHub Repository</a>.</p>
                         </Content>
                     </Content>
                 </Container>

@@ -8,7 +8,7 @@ export class HeroCard extends Component {
     render() {
         return (
             <div>
-            <Hero isColor='info' isSize='medium'>
+            <Hero isColor='success' isSize='medium'>
                 <HeroHeader>
                 </HeroHeader>
 
