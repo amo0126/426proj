@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Hero, HeroBody, HeroFooter, HeroHeader, Nav,
+import {Hero, HeroBody, HeroFooter, HeroHeader, Content,
 Container, Tabs, TabLink, Tab, Title, TabList, Section} from 'bloomer';
 import {Link} from 'react-router-dom';
 
@@ -7,7 +7,7 @@ export class Social extends Component {
     render() {
         return (
             <div>
-            <Hero isColor='info' isSize='medium'>
+            <Hero isColor='success' isSize='medium'>
                 <HeroHeader>
                 </HeroHeader>
 
@@ -32,9 +32,19 @@ export class Social extends Component {
                 </HeroFooter>
                 </Hero>
                 <body>
-                    <Section>
-                        Human Interaction (not social media)
-                    </Section>   
+                <Section>
+                    <Content>
+                        <h1>Social Wellness</h1>
+                        <p>
+                            In the time of COVID, it can be hard to interact with others without using a phone.
+                            However, social wellness is so very important to the overall health of our minds. 
+                            If possible, you should focus on activities that allow you to see others in person
+                            while complying with the <a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html">CDC guidlines</a> to maintain 6 feet apart. 
+                        </p>
+                        <p>Always wear your mask!</p>
+                        <p>And don't forget to take time away from social media and give your loved ones a call</p>
+                    </Content>
+                </Section>   
                 </body>
             </div>
         );
