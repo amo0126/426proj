@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Hero, HeroBody, HeroFooter, HeroHeader, Nav,
-Container, Tabs, TabLink, Tab, Title, TabList, Section} from 'bloomer';
+Container, Tabs, Content, Tab, Title, TabList, Section} from 'bloomer';
 import {Link} from 'react-router-dom';
 
 export class Mental extends Component {
@@ -33,7 +33,12 @@ export class Mental extends Component {
         </Hero>
         <body>
             <Section>
-                Meditation
+                <Content>
+                    <h1>Mental Wellness</h1>
+                    <p>Mental Wellness is a very important part of selfcare. This form of selfcare can
+                    include meditation, deep breathing exerecises, and speaking to a therapist.
+                    </p>
+                </Content>
             </Section>   
         </body>
     </div>

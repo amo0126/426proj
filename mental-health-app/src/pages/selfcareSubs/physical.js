@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Hero, HeroBody, HeroFooter, HeroHeader, Nav,
-Container, Tabs, TabLink, Tab, Title, TabList, Section} from 'bloomer';
+Container, Tabs, Content, Tab, Title, TabList, Section} from 'bloomer';
 import {Link} from 'react-router-dom';
 
 export class Physical extends Component {
@@ -33,8 +33,16 @@ export class Physical extends Component {
                 </Hero>
                 <body>
                     <Section>
-                        Exercise
-                    </Section>   
+                        <Content>
+                            <h1>Physical Wellness</h1>
+                            <p>
+                                Physical Wellness is important for both your health and happiness. According to 
+                                doctors, participating in physical activity for at least 30 minutes a day will
+                                improve the levels of seratonin in your body. Some common physical activities that also 
+                                promote a healthy mind are running, yoga, and pilates.
+                            </p>
+                        </Content> 
+                    </Section> 
                 </body>
             </div>
         );
