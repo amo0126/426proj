@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Section} from 'bloomer';
-import { Search } from '../components/searchComponent/search';
+import Quotes from '../components/quotes';
 
 export class Home extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ export class Home extends Component {
       <div>
         <body>
           <Section>
-            <Search/>
+            <Quotes />
           </Section> 
         </body>
       </div>
